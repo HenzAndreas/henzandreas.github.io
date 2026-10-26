@@ -218,7 +218,7 @@
                 <p data-en="I study glaciers, the landscapes they shape, and the stories they leave behind." data-de="Ich erforsche Gletscher, die von ihnen geprägten Landschaften und die Geschichten, die sie hinterlassen.">I study glaciers, the landscapes they shape, and the stories they leave behind.</p>
             </section>
 
-            <a class="project" href="/little-ice-age-glacier-viewer/">
+            <a class="project" href="/little-ice-age-glacier-viewer/" data-goatcounter-click="link/lia-viewer" data-goatcounter-title="Open the LIA viewer">
                 <img class="landscape" src="assets/glacier-viewer.png" alt="Aerial view of Alpine glaciers during the Little Ice Age" data-alt-en="Aerial view of Alpine glaciers during the Little Ice Age" data-alt-de="Luftaufnahme von Alpengletschern während der Kleinen Eiszeit">
                 <div class="project-copy">
                     <div class="project-label" data-en="Featured project" data-de="Ausgewähltes Projekt">Featured project</div>
@@ -234,6 +234,12 @@
         const languageButtons = document.querySelectorAll("[data-language]");
         const translatableElements = document.querySelectorAll("[data-en]");
 
+        function countEvent(path) {
+            if (window.goatcounter && window.goatcounter.count) {
+                window.goatcounter.count({ path, title: path, event: true });
+            }
+        }
+
         function setLanguage(language) {
             document.documentElement.lang = language;
             translatableElements.forEach((element) => {
@@ -248,8 +254,15 @@
         }
 
         languageButtons.forEach((button) => {
-            button.addEventListener("click", () => setLanguage(button.dataset.language));
+            button.addEventListener("click", () => {
+                if (document.documentElement.lang !== button.dataset.language) {
+                    countEvent(`language/${button.dataset.language}`);
+                }
+                setLanguage(button.dataset.language);
+            });
         });
     </script>
+    <script data-goatcounter="https://henzandreas-homepage.goatcounter.com/count"
+            async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

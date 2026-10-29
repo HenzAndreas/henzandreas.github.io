@@ -119,6 +119,11 @@
             font-size: clamp(1.1rem, 2vw, 1.35rem);
         }
 
+        .projects {
+            display: grid;
+            gap: clamp(1.5rem, 4vw, 2.5rem);
+        }
+
         .project {
             display: grid;
             overflow: hidden;
@@ -218,15 +223,27 @@
                 <p data-en="I study glaciers, the landscapes they shape, and the stories they leave behind." data-de="Ich erforsche Gletscher, die von ihnen geprägten Landschaften und die Geschichten, die sie hinterlassen.">I study glaciers, the landscapes they shape, and the stories they leave behind.</p>
             </section>
 
-            <a class="project" href="/little-ice-age-glacier-viewer/" data-goatcounter-click="link/lia-viewer" data-goatcounter-title="Open the LIA viewer">
-                <img class="landscape" src="assets/glacier-viewer.png" alt="Aerial view of Alpine glaciers during the Little Ice Age" data-alt-en="Aerial view of Alpine glaciers during the Little Ice Age" data-alt-de="Luftaufnahme von Alpengletschern während der Kleinen Eiszeit">
-                <div class="project-copy">
-                    <div class="project-label" data-en="Featured project" data-de="Ausgewähltes Projekt">Featured project</div>
-                    <h2>Little Ice Age Glacier Viewer</h2>
-                    <p data-en="Explore how Alpine glaciers looked during the Little Ice Age." data-de="Entdecke, wie die Alpengletscher während der Kleinen Eiszeit aussahen.">Explore how Alpine glaciers looked during the Little Ice Age.</p>
-                    <span class="visit" data-en="Open the viewer&nbsp; →" data-de="Viewer öffnen&nbsp; →">Open the viewer&nbsp; →</span>
-                </div>
-            </a>
+            <div class="projects">
+                <a class="project" href="/little-ice-age-glacier-viewer/" data-goatcounter-click="link/lia-viewer" data-goatcounter-title="Open the LIA viewer">
+                    <img class="landscape" src="assets/glacier-viewer.png" alt="Aerial view of Alpine glaciers during the Little Ice Age" data-alt-en="Aerial view of Alpine glaciers during the Little Ice Age" data-alt-de="Luftaufnahme von Alpengletschern während der Kleinen Eiszeit">
+                    <div class="project-copy">
+                        <div class="project-label" data-en="Featured project" data-de="Ausgewähltes Projekt">Featured project</div>
+                        <h2>Little Ice Age Glacier Viewer</h2>
+                        <p data-en="Explore how Alpine glaciers looked during the Little Ice Age." data-de="Entdecke, wie die Alpengletscher während der Kleinen Eiszeit aussahen.">Explore how Alpine glaciers looked during the Little Ice Age.</p>
+                        <span class="visit" data-en="Open the viewer&nbsp; →" data-de="Viewer öffnen&nbsp; →">Open the viewer&nbsp; →</span>
+                    </div>
+                </a>
+
+                <a class="project" href="/alpice-viewer/" data-goatcounter-click="link/alpice-viewer" data-goatcounter-title="Open the AlpIce-1 viewer">
+                    <img class="landscape" src="assets/alpice-viewer.png" alt="Map of glacier ages across the European Alps from the AlpIce-1 database" data-alt-en="Map of glacier ages across the European Alps from the AlpIce-1 database" data-alt-de="Karte der Gletscheralter in den Alpen aus der AlpIce-1-Datenbank">
+                    <div class="project-copy">
+                        <div class="project-label" data-en="Featured project" data-de="Ausgewähltes Projekt">Featured project</div>
+                        <h2>AlpIce-1 Viewer</h2>
+                        <p data-en="Explore thousands of dated landforms that record how Alpine glaciers changed since the Last Glacial Maximum." data-de="Entdecke Tausende datierte Landformen, die zeigen, wie sich die Alpengletscher seit dem letzten glazialen Maximum verändert haben.">Explore thousands of dated landforms that record how Alpine glaciers changed since the Last Glacial Maximum.</p>
+                        <span class="visit" data-en="Open the viewer&nbsp; →" data-de="Viewer öffnen&nbsp; →">Open the viewer&nbsp; →</span>
+                    </div>
+                </a>
+            </div>
         </main>
 
     </div>
